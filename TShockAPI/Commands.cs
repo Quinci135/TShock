@@ -546,7 +546,7 @@ namespace TShockAPI
 			});
 			add(new Command(Permissions.heal, Heal, "heal")
 			{
-				HelpText = "Heals a player in HP and MP."
+				HelpText = "Heals a player in HP."
 			});
 			add(new Command(Permissions.kill, Kill, "kill")
 			{
@@ -2341,8 +2341,9 @@ namespace TShockAPI
 				args.Player.SendErrorMessage("Invalid mode! Valid modes: {0}", String.Join(", ", _worldModes.Keys));
 				return;
 			}
-
+			
 			Main.GameMode = mode;
+			TSPlayer.All.SendData(PacketTypes.WorldInfo);
 			args.Player.SendSuccessMessage("World mode set to {0}", _worldModes.Keys.ElementAt(mode));
 		}
 
