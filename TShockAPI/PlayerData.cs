@@ -36,7 +36,7 @@ namespace TShockAPI
 		public bool exists;
 		public int spawnX = -1;
 		public int spawnY = -1;
-		public int? extraSlot;
+		public int extraSlot;
 		public int? skinVariant;
 		public int? hair;
 		public byte hairDye;
@@ -49,6 +49,9 @@ namespace TShockAPI
 		public Color? eyeColor;
 		public bool[] hideVisuals;
 		public int questsCompleted;
+		public int usingBiomeTorches;
+		public int happyFunTorchTime = 1;
+		public int unlockedBiomeTorches;
 
 		public PlayerData(TSPlayer player)
 		{
@@ -114,6 +117,9 @@ namespace TShockAPI
 			this.skinColor = player.TPlayer.skinColor;
 			this.eyeColor = player.TPlayer.eyeColor;
 			this.questsCompleted = player.TPlayer.anglerQuestsFinished;
+			this.usingBiomeTorches = player.TPlayer.UsingBiomeTorches ? 1 : 0;
+			this.happyFunTorchTime = player.TPlayer.happyFunTorchTime ? 1 : 0;
+			this.unlockedBiomeTorches = player.TPlayer.unlockedBiomeTorches ? 1 : 0;
 
 			Item[] inventory = player.TPlayer.inventory;
 			Item[] armor = player.TPlayer.armor;
@@ -208,9 +214,11 @@ namespace TShockAPI
 			player.sY = this.spawnY;
 			player.TPlayer.hairDye = this.hairDye;
 			player.TPlayer.anglerQuestsFinished = this.questsCompleted;
+			player.TPlayer.extraAccessory = this.extraSlot == 1;
+			player.TPlayer.UsingBiomeTorches = this.usingBiomeTorches == 1;
+			player.TPlayer.happyFunTorchTime = this.happyFunTorchTime == 1;
+			player.TPlayer.unlockedBiomeTorches = this.unlockedBiomeTorches == 1;
 
-			if (extraSlot != null)
-				player.TPlayer.extraAccessory = extraSlot.Value == 1 ? true : false;
 			if (this.skinVariant != null)
 				player.TPlayer.skinVariant = this.skinVariant.Value;
 			if (this.hair != null)
@@ -227,8 +235,6 @@ namespace TShockAPI
 				player.TPlayer.shoeColor = this.shoeColor.Value;
 			if (this.skinColor != null)
 				player.TPlayer.skinColor = this.skinColor.Value;
-			if (this.eyeColor != null)
-				player.TPlayer.eyeColor = this.eyeColor.Value;
 
 			if (this.hideVisuals != null)
 				player.TPlayer.hideVisibleAccessory = this.hideVisuals;

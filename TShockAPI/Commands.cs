@@ -221,11 +221,6 @@ namespace TShockAPI
 				ChatCommands.Add(cmd);
 			};
 
-			add(new Command(SetupToken, "setup")
-			{
-				AllowServer = false,
-				HelpText = "Used to authenticate as superadmin when first setting up TShock."
-			});
 			add(new Command(Permissions.user, ManageUsers, "user")
 			{
 				DoLog = false,
@@ -250,12 +245,6 @@ namespace TShockAPI
 				AllowServer = false,
 				DoLog = false,
 				HelpText = "Changes your account's password."
-			});
-			add(new Command(Permissions.canregister, RegisterUser, "register")
-			{
-				AllowServer = false,
-				DoLog = false,
-				HelpText = "Registers you an account."
 			});
 			add(new Command(Permissions.checkaccountinfo, ViewAccountInfo, "accountinfo", "ai")
 			{

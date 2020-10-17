@@ -185,7 +185,7 @@ namespace TShockAPI
 						}
 						else if (args.Player.IsDisabledPendingTrashRemoval)
 						{
-							args.Player.SendErrorMessage("You need to rejoin to ensure your trash can is cleared!");
+							//args.Player.SendErrorMessage("You need to rejoin to ensure your trash can is cleared!");
 						}
 
 						// ??

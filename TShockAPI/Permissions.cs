@@ -109,10 +109,10 @@ namespace TShockAPI
 
 		#region tshock.buff nodes
 		[Description("User can buff self.")]
-		public static readonly string buff = "tshock.buff.self";
+		public static readonly string buff = "tshock.s.buff.self";
 
 		[Description("User can buff other players.")]
-		public static readonly string buffplayer = "tshock.buff.others";
+		public static readonly string buffplayer = "tshock.s.buff.others";
 		#endregion
 
 		#region tshock.cfg nodes
@@ -172,10 +172,10 @@ namespace TShockAPI
 
 		#region tshock.item nodes
 		[Description("User can give items.")]
-		public static readonly string give = "tshock.item.give";
+		public static readonly string give = "tshock.s.item.give";
 
 		[Description("User can spawn items.")]
-		public static readonly string item = "tshock.item.spawn";
+		public static readonly string item = "tshock.s.item.spawn";
 
 		[Description("Allows you to use banned items.")]
 		public static readonly string usebanneditem = "tshock.item.usebanned";
@@ -245,7 +245,7 @@ namespace TShockAPI
 		public static readonly string getpos = "tshock.tp.getpos";
 
 		[Description("User can teleport to an NPC.")]
-		public static readonly string tpnpc = "tshock.tp.npc";
+		public static readonly string tpnpc = "tshock.s.tp.npc";
 
 		[Description("Users can stop people from teleporting.")]
 		public static readonly string tpallow = "tshock.tp.block";
@@ -274,7 +274,7 @@ namespace TShockAPI
 
 		#region tshock.world nodes
 		[Description("User can use the 'worldevent' command")]
-		public static readonly string manageevents = "tshock.world.events";
+		public static readonly string manageevents = "tshock.s.world.events";
 
 		[Description("User can use the 'bloodmoon' subcommand of the 'worldevent' command")]
 		public static readonly string managebloodmoonevent = "tshock.world.events.bloodmoon";
@@ -378,43 +378,43 @@ namespace TShockAPI
 
 		#region tshock.journey nodes
 		[Description("User can use Creative UI freeze time.")]
-		public static readonly string journey_timefreeze = "tshock.journey.time.freeze";
+		public static readonly string journey_timefreeze = "tshock.s.journey.time.freeze";
 
 		[Description("User can use Creative UI to set world time.")]
-		public static readonly string journey_timeset = "tshock.journey.time.set";
+		public static readonly string journey_timeset = "tshock.s.journey.time.set";
 
 		[Description("User can use Creative UI to set world time speed.")]
-		public static readonly string journey_timespeed = "tshock.journey.time.setspeed";
+		public static readonly string journey_timespeed = "tshock.s.journey.time.setspeed";
 
 		[Description("User can use Creative UI to to toggle character godmode.")]
-		public static readonly string journey_godmode = "tshock.journey.godmode";
+		public static readonly string journey_godmode = "tshock.s.journey.godmode";
 
 		[Description("User can use Creative UI to set world wind strength/seed.")]
-		public static readonly string journey_windstrength = "tshock.journey.wind.strength";
+		public static readonly string journey_windstrength = "tshock.s.journey.wind.strength";
 
 		[Description("User can use Creative UI to stop the world wind strength from changing.")]
-		public static readonly string journey_windfreeze = "tshock.journey.wind.freeze";
+		public static readonly string journey_windfreeze = "tshock.s.journey.wind.freeze";
 
 		[Description("User can use Creative UI to set world rain strength/seed.")]
-		public static readonly string journey_rainstrength = "tshock.journey.rain.strength";
+		public static readonly string journey_rainstrength = "tshock.s.journey.rain.strength";
 
 		[Description("User can use Creative UI to stop the world rain strength from changing.")]
-		public static readonly string journey_rainfreeze = "tshock.journey.rain.freeze";
+		public static readonly string journey_rainfreeze = "tshock.s.journey.rain.freeze";
 
 		[Description("User can use Creative UI to toggle increased placement range.")]
-		public static readonly string journey_placementrange = "tshock.journey.placementrange";
+		public static readonly string journey_placementrange = "tshock.s.journey.placementrange";
 
 		[Description("User can use Creative UI to set world difficulty/mode.")]
-		public static readonly string journey_setdifficulty = "tshock.journey.setdifficulty";
+		public static readonly string journey_setdifficulty = "tshock.s.journey.setdifficulty";
 
 		[Description("User can use Creative UI to stop the biome spread of the world.")]
-		public static readonly string journey_biomespreadfreeze = "tshock.journey.biomespreadfreeze";
+		public static readonly string journey_biomespreadfreeze = "tshock.s.journey.biomespreadfreeze";
 
 		[Description("User can use Creative UI to set the NPC spawn rate of the world.")]
-		public static readonly string journey_setspawnrate = "tshock.journey.setspawnrate";
+		public static readonly string journey_setspawnrate = "tshock.s.journey.setspawnrate";
 
 		[Description("User can contribute research by sacrificing items")]
-		public static readonly string journey_contributeresearch = "tshock.journey.research";
+		public static readonly string journey_contributeresearch = "tshock.s.journey.research";
 		#endregion
 
 		#region Non-grouped
